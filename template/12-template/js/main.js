@@ -1,5 +1,5 @@
-const frame = document.querySelector("#circle");
-const lists = frame.querySelector("article");
+const frame = document.querySelectorAll("#circle");
+const lists = frame.querySelectorAll(".article");
 const deg = 45;
 const len = lists.length - 1;
 let i = 0;
