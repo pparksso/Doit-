@@ -1,0 +1,171 @@
+body {
+  font-size: 16px;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#container {
+  background-color: rgb(207, 239, 252);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  .inner {
+    width: 300px;
+    margin: auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 25px;
+  }
+}
+#nav {
+  display: flex;
+  justify-content: space-between;
+}
+#profile {
+  .photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    margin: 0 auto;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 100%;
+    }
+  }
+  .textBox {
+    margin: 20px 0 40px 0;
+    text-align: center;
+    line-height: 1.5;
+    h1 {
+      font-weight: 700;
+      font-size: 24px;
+    }
+    p {
+      color: #999;
+    }
+  }
+  a {
+    display: block;
+    margin: 0 auto;
+    font-size: 12px;
+    text-align: center;
+    line-height: 35px;
+    font-weight: 700;
+    width: 200px;
+    height: 35px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: rgb(28, 172, 172);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+  }
+}
+#contact {
+  text-align: center;
+  line-height: 3;
+
+  ul {
+    li {
+      .facebook {
+        position: relative;
+        &:before {
+          content: "\e163";
+          font-family: "Material Icons";
+          font-size: 20px;
+          position: absolute;
+          display: block;
+          top: -18px;
+          left: -60px;
+        }
+        &:after {
+          content: "";
+          width: 330px;
+          height: 1px;
+          background-color: #ddd;
+          display: block;
+          position: absolute;
+          bottom: -15px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+      .mail {
+        position: relative;
+        &:before {
+          content: "\e0be";
+          font-family: "Material Icons";
+          font-size: 20px;
+          position: absolute;
+          display: block;
+          left: -60px;
+          bottom: -22px;
+        }
+      }
+    }
+  }
+}
+#others {
+  display: flex;
+  justify-content: space-evenly;
+  a {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: block;
+    opacity: 0.4;
+    filter: saturate(0.7);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    &.others_01 {
+      background-color: rgb(75, 157, 250);
+    }
+    &.others_02 {
+      background-color: rgb(112, 255, 207);
+    }
+    &.others_03 {
+      background-color: rgb(253, 147, 183);
+    }
+    &.others_04 {
+      background-color: rgb(225, 104, 255);
+    }
+    &.on {
+      opacity: 1;
+      filter: saturate(1);
+    }
+  }
+}
+
+#member02 {
+  .inner {
+    #profile {
+      a {
+        background-color: rgb(121, 255, 150);
+      }
+    }
+  }
+}
+#member03 {
+  .inner {
+    #profile {
+      a {
+        background-color: rgb(255, 2, 150);
+      }
+    }
+  }
+}
+#member04 {
+  .inner {
+    #profile {
+      a {
+        background-color: rgb(150, 23, 255);
+      }
+    }
+  }
+}
