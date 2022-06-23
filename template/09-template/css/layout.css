@@ -1,0 +1,177 @@
+body {
+  font-family: "Poiret One", cursive;
+  font-size: 16px;
+  color: #111;
+  height: 100vh;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  background-color: #b08fcc;
+  animation: skyChange 20s linear infinite;
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+}
+
+h1 {
+  font-size: 96px;
+  color: #fff;
+  margin-top: 50px;
+}
+
+section {
+  width: 1000px;
+  height: 270px;
+  position: relative;
+}
+section .people {
+  position: absolute;
+  bottom: 0;
+}
+section .people .man {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  animation: manMove 10s ease infinite;
+}
+section .people .family {
+  bottom: 0;
+  position: absolute;
+  animation: familyMove 20s linear infinite;
+}
+section .sky {
+  position: absolute;
+  width: 1000px;
+}
+section .sky .sun {
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  animation: sunRotation 30s linear infinite;
+  transform-origin: 50% 500px;
+}
+section .sky .cloud1 {
+  position: absolute;
+  top: -50px;
+  animation: cloud01Move 10s linear infinite;
+}
+section .sky .cloud2 {
+  position: absolute;
+  left: 300px;
+  top: -100px;
+  opacity: 0;
+  animation: cloud02Move 10s linear 5s infinite;
+}
+section .town {
+  position: relative;
+}
+section .town .circle {
+  position: absolute;
+  left: 305px;
+  top: -110px;
+  animation: circleRotation 30s linear infinite;
+}
+section .town .night {
+  position: absolute;
+}
+section .town .day {
+  position: relative;
+  animation: townChange 20s linear infinite;
+}
+
+@keyframes skyChange {
+  0% {
+    background-color: #b08fcc;
+  }
+  25% {
+    background-color: #b1e1e2;
+  }
+  50% {
+    background-color: #fcd2e2;
+  }
+  75% {
+    background-color: #b1e1e2;
+  }
+  100% {
+    background-color: #b08fcc;
+  }
+}
+@keyframes manMove {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 1000px;
+    opacity: 0;
+  }
+}
+@keyframes familyMove {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 1000px;
+    opacity: 0;
+  }
+}
+@keyframes circleRotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes cloud01Move {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+  50% {
+    left: 500px;
+    opacity: 1;
+  }
+  100% {
+    left: 1000px;
+    opacity: 0;
+  }
+}
+@keyframes cloud02Move {
+  0% {
+    left: 300px;
+    opacity: 0;
+  }
+  50% {
+    left: 500px;
+    opacity: 1;
+  }
+  100% {
+    left: 1000px;
+    opacity: 0;
+  }
+}
+@keyframes townChange {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sunRotation {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) rotate(-90deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) rotate(90deg);
+  }
+}

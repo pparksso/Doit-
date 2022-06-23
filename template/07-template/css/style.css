@@ -1,53 +1,152 @@
-body { font-size: 16px; color: #000; }
+body {
+  font-size: 16px;
+  color: #000;
+}
 
-a { text-decoration: none; color: inherit; }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-#container { background-color: #cfeffc; width: 100%; height: 100vh; display: flex; align-items: center; }
+#container {
+  background-color: rgb(207, 239, 252);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+#container .inner {
+  width: 300px;
+  margin: auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 25px;
+}
 
-#container .inner { width: 300px; margin: auto; background-color: #fff; padding: 30px; border-radius: 25px; }
+#nav {
+  display: flex;
+  justify-content: space-between;
+}
 
-#nav { display: flex; justify-content: space-between; }
+#profile .photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  margin: 0 auto;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+#profile .photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+#profile .textBox {
+  margin: 20px 0 40px 0;
+  text-align: center;
+  line-height: 1.5;
+}
+#profile .textBox h1 {
+  font-weight: 700;
+  font-size: 24px;
+}
+#profile .textBox p {
+  color: #999;
+}
+#profile a {
+  display: block;
+  margin: 0 auto;
+  font-size: 12px;
+  text-align: center;
+  line-height: 35px;
+  font-weight: 700;
+  width: 200px;
+  height: 35px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: rgb(28, 172, 172);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 30px;
+}
 
-#profile .photo { width: 200px; height: 200px; border-radius: 100%; margin: 0 auto; box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3); }
+#contact {
+  text-align: center;
+  line-height: 3;
+}
+#contact ul li .facebook {
+  position: relative;
+}
+#contact ul li .facebook:before {
+  content: "\e163";
+  font-family: "Material Icons";
+  font-size: 20px;
+  position: absolute;
+  display: block;
+  top: -18px;
+  left: -60px;
+}
+#contact ul li .facebook:after {
+  content: "";
+  width: 330px;
+  height: 1px;
+  background-color: #ddd;
+  display: block;
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#contact ul li .mail {
+  position: relative;
+}
+#contact ul li .mail:before {
+  content: "\e0be";
+  font-family: "Material Icons";
+  font-size: 20px;
+  position: absolute;
+  display: block;
+  left: -60px;
+  bottom: -22px;
+}
 
-#profile .photo img { width: 200px; height: 200px; border-radius: 100%; }
+#others {
+  display: flex;
+  justify-content: space-evenly;
+}
+#others a {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  display: block;
+  opacity: 0.4;
+  filter: saturate(0.7);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+#others a.others_01 {
+  background-color: rgb(75, 157, 250);
+}
+#others a.others_02 {
+  background-color: rgb(112, 255, 207);
+}
+#others a.others_03 {
+  background-color: rgb(253, 147, 183);
+}
+#others a.others_04 {
+  background-color: rgb(225, 104, 255);
+}
+#others a.on {
+  opacity: 1;
+  filter: saturate(1);
+}
 
-#profile .textBox { margin: 20px 0 40px 0; text-align: center; line-height: 1.5; }
+#member02 .inner #profile a {
+  background-color: rgb(121, 255, 150);
+}
 
-#profile .textBox h1 { font-weight: 700; font-size: 24px; }
+#member03 .inner #profile a {
+  background-color: rgb(255, 2, 150);
+}
 
-#profile .textBox p { color: #999; }
-
-#profile a { display: block; margin: 0 auto; font-size: 12px; text-align: center; line-height: 35px; font-weight: 700; width: 200px; height: 35px; border-radius: 20px; box-sizing: border-box; color: #fff; background-color: #1cacac; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); margin-bottom: 30px; }
-
-#contact { text-align: center; line-height: 3; }
-
-#contact ul li .facebook { position: relative; }
-
-#contact ul li .facebook:before { content: "\e163"; font-family: "Material Icons"; font-size: 20px; position: absolute; display: block; top: -18px; left: -60px; }
-
-#contact ul li .facebook:after { content: ""; width: 330px; height: 1px; background-color: #ddd; display: block; position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); }
-
-#contact ul li .mail { position: relative; }
-
-#contact ul li .mail:before { content: "\e0be"; font-family: "Material Icons"; font-size: 20px; position: absolute; display: block; left: -60px; bottom: -22px; }
-
-#others { display: flex; justify-content: space-evenly; }
-
-#others a { width: 50px; height: 50px; border-radius: 100%; display: block; opacity: 0.4; filter: saturate(0.7); box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3); }
-
-#others a.others_01 { background-color: #4b9dfa; }
-
-#others a.others_02 { background-color: #70ffcf; }
-
-#others a.others_03 { background-color: #fd93b7; }
-
-#others a.others_04 { background-color: #e168ff; }
-
-#others a.on { opacity: 1; filter: saturate(1); }
-
-#member02 .inner #profile a { background-color: #79ff96; }
-
-#member03 .inner #profile a { background-color: #ff0296; }
-
-#member04 .inner #profile a { background-color: #9617ff; }
+#member04 .inner #profile a {
+  background-color: rgb(150, 23, 255);
+}
