@@ -1,0 +1,11 @@
+@import "mixin";
+@import "vars";
+
+body {
+  font-family: "Poiret One", cursive;
+  font-size: $font-nomal;
+  color: $font-color;
+}
+a {
+  color: inherit;
+}

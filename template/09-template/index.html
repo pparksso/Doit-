@@ -28,7 +28,7 @@
     <script src="./js/swiper-bundle.min.js"></script>
   </head>
   <body>
-    <h1>Have a Good Day!!</h1>
+    <h1 data-splitting>Have a Good Day!!</h1>
     <section>
       <article class="sky">
         <img src="./img/sun.png" alt="" class="sun" />
@@ -45,5 +45,20 @@
         <img src="./img/family.png" alt="" class="family" />
       </article>
     </section>
+    <script>
+      Splitting();
+      gsap.from("h1 .char", {
+        y: -200,
+        opacity: 0,
+        ease: "bounce",
+        duration: 2,
+        repeatDelay: 5,
+        repeat: -1,
+        stagger: {
+          each: 0.1,
+          from: "left",
+        },
+      });
+    </script>
   </body>
 </html>
